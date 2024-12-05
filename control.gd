@@ -31,7 +31,7 @@ func set_new_value(new_v) -> void:
 			bar_flow.value = buf
 	timer_await.start()
 	value = clampi(new_v, 0, 100)
-	bar_basic.value = value
+	if bar_basic != null: bar_basic.value = value
 
 ## Set's curve specificly for current amount of degreesed value.
 func set_curve() -> void:
